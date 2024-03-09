@@ -1,0 +1,16 @@
+@startuml name
+class Book {
+  - title: string
+  - category: string
+  - author: string
+}
+
+class Shelf {
+  - categories: set
+  - books: list<Book>
+  + organize_books(books: list<Book>): void
+  + sort_books_by_title(): void
+}
+
+Book --* Shelf
+@enduml
